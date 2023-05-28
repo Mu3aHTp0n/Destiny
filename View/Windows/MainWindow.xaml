@@ -9,13 +9,16 @@
         xmlns:vm="clr-namespace:Destiny.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="450">
+    <Window.DataContext>
+        <vm:ViewModel2048/>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <TextBlock Text="2 0 4 8" FontSize="30" TextAlignment="Center"/>
+            <TextBlock Text="2 0 4 8" FontSize="36" TextAlignment="Center"/>
             <TextBlock>
                 <Run Text="Максимальное значение:"/>
                 <Run Text="{Binding MaxValue, Mode=OneWay}"/>
@@ -30,7 +33,7 @@
             <TextBlock TextAlignment="Center" FontWeight="Bold" Margin="10" Foreground="Red" Opacity="0.65" >
                 <TextBlock.Style>
                     <Style TargetType="TextBlock">
-                        <Setter Property="Text" Value="ИГРА &#10; закончена!"/>
+                        <Setter Property="Text" Value="Game &#10; over!"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding IsGameOver}" Value="false">
                                 <Setter Property="Text" Value="{x:Null}"/>
