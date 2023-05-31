@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Destiny" 
         xmlns:m="clr-namespace:Destiny.Model"
-        xmlns:v="clr-namespace:Destiny.View"
         xmlns:vm="clr-namespace:Destiny.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="450">
