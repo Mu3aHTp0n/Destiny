@@ -3,11 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Destiny" 
         xmlns:m="clr-namespace:Destiny.Model"
         xmlns:vm="clr-namespace:Destiny.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="450">
+        Title="MainWindow" Height="600" Width="450" KeyUp="Window_KeyUp">
     <Window.DataContext>
         <vm:ViewModel2048/>
     </Window.DataContext>
@@ -65,7 +64,7 @@
                                BorderThickness="3">
                                 <Label.Style>
                                     <Style TargetType="Label">
-                                        
+                                        <Setter Property="Content" Value="{Binding Value, Converter={StaticResource IntConverter}}"/>
                                         <Setter Property="Foreground" Value="#20FF00"/>
                                         <Setter Property="BorderBrush" Value="Transparent"/>
                                         <Style.Triggers>
